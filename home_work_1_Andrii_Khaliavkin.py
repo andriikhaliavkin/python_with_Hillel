@@ -30,5 +30,7 @@ print(comparison)
 str1 = "Hello "
 str2 = "world"
 
+str3 = str1 + str2
+print(str3)
 print(str1 + str2)
 print(f'{str1}{str2}')
