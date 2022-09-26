@@ -9,13 +9,15 @@
 while True:
     try:
         user_age = int(input('Скільки тобі років?: '))
+        if user_age < 1 or user_age > 100:
+            print('Ти ще не народився або швидше за все вже помер')
+            continue
         break
-    except ValueError:
-        print('Будьласка введіть цифрами!!!')
-
+    except ValueError as e:
+        print('введіть по нормальному')
 
 if '7' in str(user_age):
-    print('Вам сьогодні пощастить!')
+    print('Вам сьогодні пощастить')
 elif user_age < 7:
     print('Де твої батьки?')
 elif user_age < 16:
@@ -23,4 +25,4 @@ elif user_age < 16:
 elif user_age > 65:
     print('Покажіть пенсійне посвідчення!')
 else:
-    print('А білетів вже немає!')
+    print('А білетів вже немає')
