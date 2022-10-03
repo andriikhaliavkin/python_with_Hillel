@@ -13,7 +13,7 @@ word_list_from_random_sentence = random_sentence.split()
 
 print(word_list_from_random_sentence)
 
-words_with_pair_vowels = []
+words_with_pair_vowels = set()
 
 for word in word_list_from_random_sentence:
 
@@ -22,7 +22,7 @@ for word in word_list_from_random_sentence:
 
     for letter in range(len(list_of_letters_in_the_word)-1):
         if list_of_letters_in_the_word[letter] in vowels and list_of_letters_in_the_word[letter+1] in vowels:
-            words_with_pair_vowels.append(word)
+            words_with_pair_vowels.add(word)
 
 if len(words_with_pair_vowels) == 0:
     print('There is no any word with pair vowels')
