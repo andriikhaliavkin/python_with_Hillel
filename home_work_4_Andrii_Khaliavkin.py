@@ -1,5 +1,5 @@
 from essential_generators import DocumentGenerator
-import numpy as np
+
 print(
     '''---------------------------------TASK 1----------------------------------------''')
 # Дана довільна строка. Напишіть код, який знайде в ній і віведе на екран кількість слів, які містять дві голосні літери підряд.
@@ -40,6 +40,9 @@ print(
 
 stores_with_prices = {"cito": 47.999, "BB_studio": 42.999, "momo": 49.999, "main-service": 37.245, "buy.now": 38.324,
                       "x-store": 37.166, "the_partner": 38.988, "store": 37.720, "rozetka": 38.003}
+list_of_stores = list(stores_with_prices.keys())
+list_of_prices = list(stores_with_prices.values())
+
 
 while True:
     try:
@@ -56,7 +59,10 @@ while True:
 print(min_price)
 print(max_price)
 
-# кароч, на данный момент - у нас есть мин и макс как флоаты. они составляют диапазон. Надо проверить значения
-# словаря. если они в диапазоне - расширить список их ключем
+for price in range(len(list_of_prices)):
+    if min_price <= list_of_prices[price] <= max_price:
+        list_of_stores.append(list_of_stores[price])
+        print(list_of_stores[price])
+
 
 
