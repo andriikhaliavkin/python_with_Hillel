@@ -43,7 +43,7 @@ stores_with_prices = {"cito": 47.999, "BB_studio": 42.999, "momo": 49.999, "main
 list_of_stores = list(stores_with_prices.keys())
 list_of_prices = list(stores_with_prices.values())
 
-
+# receiving min and max prices from user:
 while True:
     try:
         min_price = float(input('provide minimum price: '))
@@ -56,13 +56,19 @@ while True:
     except ValueError as e:
         print('Please enter prices in numbers: ')
 
-print(min_price)
-print(max_price)
-
+# finding stores with prices in range and saving in a new list:
+stores_in_range = []
 for price in range(len(list_of_prices)):
     if min_price <= list_of_prices[price] <= max_price:
-        list_of_stores.append(list_of_stores[price])
-        print(list_of_stores[price])
+        stores_in_range.append(list_of_stores[price])
+
+if len(stores_in_range) == 0:
+    print('There is no any store with price in range')
+elif len(stores_in_range) == 1:
+    print(f'There is only 1 store with price in range: {stores_in_range}')
+else:
+    print(f'The are {len(stores_in_range)} stores with price in range: {stores_in_range}')
+
 
 
 
