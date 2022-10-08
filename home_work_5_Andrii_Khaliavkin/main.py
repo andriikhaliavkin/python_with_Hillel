@@ -1,5 +1,4 @@
 import requests
-
 import pandas as pd
 
 print(
@@ -27,5 +26,5 @@ city_name = input('Enter city name: ')
 url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric'
 r = requests.get(url)
 weather = r.json()
-print(f'Temperature in {city_name} is {weather["main"]["temp"]} C')
-print(f'Wind speed in {city_name} is {weather["wind"]["speed"]} m/s')
+print(f'Temperature in {city_name.capitalize()} is {weather["main"]["temp"]} C')
+print(f'Wind speed in {city_name.capitalize()} is {weather["wind"]["speed"]} m/s')
