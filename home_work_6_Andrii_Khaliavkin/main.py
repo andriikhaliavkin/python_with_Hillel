@@ -36,9 +36,9 @@ def multiply_or_concat(arg1, arg2):
 
 print(multiply_or_concat('d', 'f'))
 
-
 print(
     '''---------------------------------TASK 3----------------------------------------''')
+
 
 # Попросіть користувача ввести свсвій вік.
 # - якщо користувачу менше 7 - вивести "Тобі ж <> <>! Де твої батьки?"
@@ -62,6 +62,7 @@ def check_age(age):
         return f"Вам {age} {get_year(age)}, вам пощастить"
     else:
         return f"Незважаючи на те, що вам {age} {get_year(age)}, білетів всеодно нема!"
+
 
 def get_year(age):
     """Take age as arg, return string"""
