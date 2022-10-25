@@ -11,32 +11,13 @@ import random
 import time
 
 
-def timer(func):
-    def wrapper(*args, **kwargs):
+def decorator(func):
+    def wrapper():
         start = time.time()
-        func(*args, **kwargs)
+        func()
         end = time.time()
-        print(f'Game duration: {end - start} seconds')
-
+        print(f'Время выполнения функции: {end - start} секунд')
     return wrapper
 
 
-def main():
-    while True:
-        print('Guess the number from 1 to 100')
-        number = random.randint(1, 100)
-        guess = 0
-        while guess != number:
-            guess = int(input('Your guess: '))
-            if guess > number:
-                print('Too high')
-            elif guess < number:
-                print('Too low')
-            else:
-                print('Congratulations!')
-        answer = input('Do you want to play again? (Y/N) ')
-        if answer.lower() == 'n':
-            break
 
-main()
-timer(main)
