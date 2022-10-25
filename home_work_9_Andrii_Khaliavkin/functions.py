@@ -30,4 +30,4 @@ def game():
     if user_answer == 'Y':
         game()
     elif user_answer == 'N':
-        print('Дякуємо за игру!')
+        print('Дякуємо за гру!')
