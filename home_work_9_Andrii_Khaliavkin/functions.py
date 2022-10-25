@@ -26,7 +26,7 @@ def game():
             print('Тепло')
         elif 1 <= abs(user_number - number) <= 4:
             print('Гаряче')
-    user_answer = input('Хочешь повторити гру? (Y/N): ')
+    user_answer = input('Хочеш повторити гру? (Y/N): ')
     if user_answer == 'Y':
         game()
     elif user_answer == 'N':
