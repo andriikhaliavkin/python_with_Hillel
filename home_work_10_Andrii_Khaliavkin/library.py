@@ -30,6 +30,3 @@ def is_odd_or_even(number):
         return 'even'
     else:
         return 'odd'
-
-
-
