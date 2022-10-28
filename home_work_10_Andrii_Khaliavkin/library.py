@@ -1,9 +1,4 @@
-
 # потрібно дописати is_string_capitalized (в тому числі докстрінги) - очікування - прохід тестів
-# assert is_string_capitalized('My name is David') is False
-# assert is_string_capitalized('I love playing') is True
-# assert is_string_capitalized('') is True
-# assert is_string_capitalized('565656') is True
 
 def is_string_capitalized(string):
     """
@@ -13,18 +8,14 @@ def is_string_capitalized(string):
     """
     if string == '':
         return True
-    elif string[0].isupper() and string[0:].islower():
+    elif string.isalnum():
         return True
-    elif string[0].isalnum():
+    elif string[0].isupper() and string[1:].islower() == True:
         return True
+    elif string[0].isupper() and string[1:].islower() == False:
+        return False
     else:
         return False
-
-
-assert is_string_capitalized('My name is David') is False
-assert is_string_capitalized('I love playing') is True
-assert is_string_capitalized('') is True
-assert is_string_capitalized('565656') is True
 
 
 # write a function to check if the given number is odd or even
@@ -41,8 +32,4 @@ def is_odd_or_even(number):
         return 'odd'
 
 
-assert is_odd_or_even(5) == 'odd'
-assert is_odd_or_even(6) == 'even'
-assert is_odd_or_even(0) == 'even'
-assert is_odd_or_even(-1) == 'odd'
 
