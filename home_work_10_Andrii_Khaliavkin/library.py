@@ -13,7 +13,7 @@ def is_string_capitalized(string):
     """
     if string == '':
         return True
-    elif string[0].isupper():
+    elif string[0].isupper() and string[0:].islower():
         return True
     elif string[0].isalnum():
         return True
@@ -21,7 +21,7 @@ def is_string_capitalized(string):
         return False
 
 
-assert is_string_capitalized('My name is David') is True
+assert is_string_capitalized('My name is David') is False
 assert is_string_capitalized('I love playing') is True
 assert is_string_capitalized('') is True
 assert is_string_capitalized('565656') is True
