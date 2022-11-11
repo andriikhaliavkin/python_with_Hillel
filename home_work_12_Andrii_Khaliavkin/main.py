@@ -109,3 +109,39 @@ class Triangle:
         p = (a + b + c) / 2
         return (p * (p - a) * (p - b) * (p - c)) ** 0.5
 
+    def __eq__(self, other):
+        return self.area == other.area
+
+    def __ne__(self, other):
+        return self.area != other.area
+
+    def __gt__(self, other):
+        return self.area > other.area
+
+    def __ge__(self, other):
+        return self.area >= other.area
+
+    def __lt__(self, other):
+        return self.area < other.area
+
+    def __le__(self, other):
+        return self.area <= other.area
+
+    def __str__(self):
+        return f'{self.p1.x}, {self.p1.y} -- {self.p2.x}, {self.p2.y} -- {self.p3.x}, {self.p3.y}'
+
+# Доопрацюйте класс Triangle наступним чином:
+# обʼєкти классу Triangle можна порівнювати між собою (==, !=, >, >=, <, <=) за площею.
+# перетворення обʼєкту классу Triangle на стрінг показує координати його вершин у форматі x1, y1 -- x2, y2 -- x3, y3
+
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)).area)
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)) == Triangle(Point(0, 0), Point(0, 1), Point(1, 0)))
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)) != Triangle(Point(0, 0), Point(0, 1), Point(1, 0)))
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)) > Triangle(Point(0, 0), Point(0, 1), Point(1, 0)))
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)) >= Triangle(Point(0, 0), Point(0, 1), Point(1, 0)))
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)) < Triangle(Point(0, 0), Point(0, 1), Point(1, 0)))
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)) <= Triangle(Point(0, 0), Point(0, 1), Point(1, 0)))
+print(Triangle(Point(0, 0), Point(0, 1), Point(1, 0)))
+
+
+
